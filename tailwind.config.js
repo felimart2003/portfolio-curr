@@ -50,6 +50,19 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addBase }) {
+      addBase({
+        'body': {
+          '-ms-overflow-style': 'none',  /* Internet Explorer 10+ */
+          'scrollbar-width': 'none',  /* Firefox */
+        },
+        'body::-webkit-scrollbar': {
+          'display': 'none',  /* Safari and Chrome */
+        },
+      });
+    },
+  ],
 }
 
