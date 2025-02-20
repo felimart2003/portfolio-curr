@@ -25,7 +25,7 @@ export default function FloatingNav() {
           }
         })
       },
-      { threshold: 0.5 },
+      { threshold: 0.3 }, // Not detecting Experience section properly at 0.5
     )
 
     sections.forEach(({ id }) => {
