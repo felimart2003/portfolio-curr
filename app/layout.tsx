@@ -7,8 +7,8 @@ import { ModeToggle } from "@/components/mode-toggle"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Usman Zafar - MERN Stack Developer",
-  description: "Portfolio of Usman Zafar, a MERN Stack Developer specializing in full-stack web applications.",
+  title: "Felipe Martinez - Software Developer",
+  description: "Felipe Martinez's personal portfolio website.",
     generator: 'v0.dev'
 }
 
@@ -30,7 +30,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-
-import './globals.css'
