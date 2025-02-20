@@ -8,18 +8,26 @@ html {
 
 body {
   @apply text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900 transition-colors duration-300;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 @layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
   .animate-gradient-x {
     animation: gradient-x 15s ease infinite;
   }
 
   @keyframes gradient-x {
+
     0%,
     100% {
       background-position: 0% 50%;
     }
+
     50% {
       background-position: 100% 50%;
     }
@@ -96,8 +104,8 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
-
