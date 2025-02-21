@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { GithubIcon as GitHub, Linkedin, Mail, ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
+import EclipseButton from '@/components/ui/EclipseButton';
+
 
 const CodePattern = () => (
   <svg
@@ -94,24 +96,7 @@ export default function Hero() {
               </a>
             </div>
             {/* OPEN RESUME BUTTON */}
-            <div className="inline-block">
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative inline-block"
-              >
-                <div className="absolute inset-0 rounded-full overflow-hidden blur-sm">
-                  <div className="eclipse glow absolute inset-0 rounded-full -z-[1]"></div>
-                </div>
-                <div className="relative rounded-full text-sm text-white bg-black/0 overflow-hidden">
-                  <div className="eclipse absolute inset-0 rounded-full bg-white -z-[1]"></div>
-                  <div className="m-[2px] px-4 py-1.5 rounded-full bg-black/95">
-                    Open Resume
-                  </div>
-                </div>
-              </a>
-            </div>
+            <EclipseButton href="/resume.pdf" text="Open Resume" />
           </motion.div>
 
           <motion.div
