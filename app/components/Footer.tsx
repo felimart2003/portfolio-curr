@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <p>
           <a
             href="https://github.com/felimart2003"
-            className="text-blue-400 hover:underline"
+            className=""
           >
             GitHub
             <GitHub className="inline-block w-6 h-6 text-gray-700 dark:text-gray-300" />
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           |{" "}
           <a
             href="https://www.linkedin.com/in/fmartinez03-"
-            className="text-blue-400 hover:underline"
+            className=""
           >
             LinkedIn
             <Linkedin className="inline-block w-6 h-6 text-gray-700 dark:text-gray-300" />
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
           |{" "}
           <a
             href="mailto:felimart2003@gmail.com"
-            className="text-blue-400 hover:underline"
+            className=""
           >
             Email{" "}
             <Mail className="inline-block w-6 h-6 text-gray-700 dark:text-gray-300" />
