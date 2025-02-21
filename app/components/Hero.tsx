@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { GithubIcon as GitHub, Linkedin, Mail, ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
-import EclipseButton from '@/components/ui/EclipseButton';
-
+import { ModeToggle } from "@/components/mode-toggle";
+import EclipseButton from "@/components/ui/EclipseButton";
 
 const CodePattern = () => (
   <svg
@@ -53,6 +53,11 @@ export default function Hero() {
       {/* Animated Gradient */}
       <div className="absolute inset-0 z-0 opacity-30">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 animate-gradient-x"></div>
+      </div>
+
+      {/* Mode Toggle */}
+      <div className="absolute top-4 right-4 z-50">
+        <ModeToggle />
       </div>
 
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
