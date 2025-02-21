@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { GitlabIcon as GitHub, Linkedin, Mail, ArrowDown } from "lucide-react";
+import { GithubIcon as GitHub, Linkedin, Mail, ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
 
 const CodePattern = () => (
@@ -93,6 +93,25 @@ export default function Hero() {
                 <Mail className="w-6 h-6 text-gray-700 dark:text-gray-300" />
               </a>
             </div>
+            {/* OPEN RESUME BUTTON */}
+            <div className="animate-eclipse">
+              {" "}
+              {
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative inline-block"
+                >
+                  <div className="relative rounded-full text-sm text-white font-thin bg-black/0 overflow-hidden">
+                    <div className="eclipse inset-0 rounded-full bg-white -z-[1]"></div>
+                    <div className="m-[2px] px-4 py-1.5 rounded-full bg-black/95">
+                      Open Resume
+                    </div>
+                  </div>
+                </a>
+              }
+            </div>
           </motion.div>
 
           <motion.div
@@ -106,31 +125,28 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 dark:from-purple-600 dark:to-blue-600 rounded-3xl transform -rotate-6 opacity-50"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0812.jpg-jQSxWaycmtpBR7IUnsPV8C8L3vlrQ2.jpeg"
-                  alt="Usman Zafar"
+                  src="./f_hero_pic.jpg"
+                  alt="Felipe Martinez"
                   fill
                   className="object-cover"
                   priority
                 />
               </div>
             </div>
-            
-            <motion.button
-              onClick={() =>
-                document
-                  .getElementById("about")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Learn More
-              <ArrowDown className="w-4 h-4" />
-            </motion.button>
-
-
           </motion.div>
+        </div>
+      </div>
+
+      {/* Coming Soon */}
+      <div class="relative">
+        <div class="absolute inset-0 rounded-full overflow-hidden blur-sm">
+          <div class="eclipse glow absolute inset-0 rounded-full -z-[1]"></div>
+        </div>
+        <div class="relative rounded-full text-sm text-white font-thin bg-black/0 overflow-hidden">
+          <div class="eclipse absolute inset-0 rounded-full bg-white -z-[1]"></div>
+          <div class="m-[2px] px-4 py-1.5 rounded-full bg-black/95">
+            Coming Soon
+          </div>
         </div>
       </div>
 
@@ -143,6 +159,21 @@ export default function Hero() {
       >
         <div className="w-1 h-12 bg-gradient-to-b from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 rounded-full animate-pulse"></div>
       </motion.div>
+      <div className="relative bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+        <motion.button
+          onClick={() =>
+            document
+              .getElementById("about")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Learn More
+          <ArrowDown className="w-4 h-4" />
+        </motion.button>
+      </div>
     </section>
   );
 }
