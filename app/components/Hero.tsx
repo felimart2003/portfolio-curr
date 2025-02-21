@@ -106,11 +106,11 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 dark:from-blue-600 dark:to-purple-600 rounded-3xl transform rotate-6 opacity-50"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 dark:from-purple-600 dark:to-blue-600 rounded-3xl transform -rotate-6 opacity-50"></div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 dark:from-blue-600 dark:to-purple-600 rounded-3xl transform rotate-12 opacity-50"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 dark:from-purple-600 dark:to-blue-600 rounded-3xl transform -rotate-12 opacity-50"></div>
+              <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden shadow-2xl inline-block">
                 <Image
-                  src="./f_hero.jpg"
+                  src="/f_hero.jpg"
                   alt="Felipe Martinez"
                   fill
                   className="object-cover"
@@ -119,19 +119,6 @@ export default function Hero() {
               </div>
             </div>
           </motion.div>
-        </div>
-      </div>
-
-      {/* Coming Soon */}
-      <div class="relative">
-        <div class="absolute inset-0 rounded-full overflow-hidden blur-sm">
-          <div class="eclipse glow absolute inset-0 rounded-full -z-[1]"></div>
-        </div>
-        <div class="relative rounded-full text-sm text-white font-thin bg-black/0 overflow-hidden">
-          <div class="eclipse absolute inset-0 rounded-full bg-white -z-[1]"></div>
-          <div class="m-[2px] px-4 py-1.5 rounded-full bg-black/95">
-            Coming Soon
-          </div>
         </div>
       </div>
 
