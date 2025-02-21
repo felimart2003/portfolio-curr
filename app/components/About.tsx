@@ -1,16 +1,32 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Code, Database, Server, Zap } from "lucide-react"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import { Code, Database, Server, Zap } from "lucide-react";
+import Image from "next/image";
 
 export default function About() {
   const skills = [
-    { icon: <Code className="w-8 h-8 text-blue-500" />, title: "Frontend", description: "React, Next.js, Redux" },
-    { icon: <Server className="w-8 h-8 text-green-500" />, title: "Backend", description: "Node.js, Express, Fastify" },
-    { icon: <Database className="w-8 h-8 text-purple-500" />, title: "Database", description: "MongoDB, Mongoose" },
-    { icon: <Zap className="w-8 h-8 text-yellow-500" />, title: "Performance", description: "Optimization, Caching" },
-  ]
+    {
+      icon: <Code className="w-8 h-8 text-blue-500" />,
+      title: "Frontend",
+      description: "React, Next.js, Redux",
+    },
+    {
+      icon: <Server className="w-8 h-8 text-green-500" />,
+      title: "Backend",
+      description: "Node.js, Express, Fastify",
+    },
+    {
+      icon: <Database className="w-8 h-8 text-purple-500" />,
+      title: "Database",
+      description: "MongoDB, Mongoose",
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-yellow-500" />,
+      title: "Performance",
+      description: "Optimization, Caching",
+    },
+  ];
 
   return (
     <section
@@ -36,14 +52,13 @@ export default function About() {
             transition={{ duration: 0.5 }}
           >
             <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-              As a passionate MERN Stack Developer, I specialize in building robust and scalable web applications. With
-              a strong foundation in MongoDB, Express.js, React, and Node.js, I create seamless full-stack solutions
-              that deliver exceptional user experiences.
+              I am currently a student at the University of Waterloo (Ontario, Canada) enrolled in
+              Bachelor of Mathematics. I am looking for a coop position for
+              Summer 2025.
             </p>
             <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-              My expertise extends to modern frameworks like Next.js and state management tools like Redux. I'm
-              committed to writing clean, efficient code and staying up-to-date with the latest industry trends to
-              deliver cutting-edge solutions for my clients.
+              I have a strong passion for programming. I also love to play soccer, chess <a href="https://lichess.org/@/TheProChessMaster">online</a>,
+              read, <a href="https://letterboxd.com/felimart">watch movies</a> and TV shows with friends! I enjoy listening to <a href="https://spoti.fi/3EJp9ZD">music</a>, playing piano, photography, no-stakes poker, <a href="https://vsco.co/fmart3/gallery">photography</a>, and YouTube. 
             </p>
           </motion.div>
           <motion.div
@@ -54,19 +69,30 @@ export default function About() {
             transition={{ duration: 0.5 }}
           >
             {skills.map((skill, index) => (
-              <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <div
+                key={index}
+                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+              >
                 {skill.icon}
-                <h3 className="text-xl font-semibold mt-4 mb-2 dark:text-white">{skill.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{skill.description}</p>
+                <h3 className="text-xl font-semibold mt-4 mb-2 dark:text-white">
+                  {skill.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {skill.description}
+                </p>
               </div>
             ))}
           </motion.div>
         </div>
       </div>
       <div className="absolute bottom-0 right-0 w-64 h-64 -mb-32 -mr-32 opacity-20">
-        <Image src="/placeholder.svg?height=256&width=256" alt="Decorative background" width={256} height={256} />
+        <Image
+          src="/placeholder.svg?height=256&width=256"
+          alt="Decorative background"
+          width={256}
+          height={256}
+        />
       </div>
     </section>
-  )
+  );
 }
-
