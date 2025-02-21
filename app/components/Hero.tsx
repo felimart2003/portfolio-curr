@@ -94,23 +94,23 @@ export default function Hero() {
               </a>
             </div>
             {/* OPEN RESUME BUTTON */}
-            <div className="animate-eclipse">
-              {" "}
-              {
-                <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative inline-block"
-                >
-                  <div className="relative rounded-full text-sm text-white font-thin bg-black/0 overflow-hidden">
-                    <div className="eclipse inset-0 rounded-full bg-white -z-[1]"></div>
-                    <div className="m-[2px] px-4 py-1.5 rounded-full bg-black/95">
-                      Open Resume
-                    </div>
+            <div className="inline-block">
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative inline-block"
+              >
+                <div className="absolute inset-0 rounded-full overflow-hidden blur-sm">
+                  <div className="eclipse glow absolute inset-0 rounded-full -z-[1]"></div>
+                </div>
+                <div className="relative rounded-full text-sm text-white bg-black/0 overflow-hidden">
+                  <div className="eclipse absolute inset-0 rounded-full bg-white -z-[1]"></div>
+                  <div className="m-[2px] px-4 py-1.5 rounded-full bg-black/95">
+                    Open Resume
                   </div>
-                </a>
-              }
+                </div>
+              </a>
             </div>
           </motion.div>
 
@@ -125,7 +125,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 dark:from-purple-600 dark:to-blue-600 rounded-3xl transform -rotate-6 opacity-50"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="./f_hero_pic.jpg"
+                  src="./f_hero.jpg"
                   alt="Felipe Martinez"
                   fill
                   className="object-cover"
@@ -159,7 +159,7 @@ export default function Hero() {
       >
         <div className="w-1 h-12 bg-gradient-to-b from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 rounded-full animate-pulse"></div>
       </motion.div>
-      <div className="relative bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+      <div className="relative bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center p-12">
         <motion.button
           onClick={() =>
             document
