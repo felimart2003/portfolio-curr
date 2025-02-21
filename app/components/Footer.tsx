@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-800 text-white py-6">
       <div className="container mx-auto text-center">
-        <p>
+        <p className="pb-3">
           Copyright &copy; {new Date().getFullYear()} Felipe Martinez. All
           Rights Reserved.
         </p>
@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             href="https://github.com/felimart2003"
             className=""
           >
-            GitHub
+            GitHub{" "}
             <GitHub className="inline-block w-6 h-6 text-gray-700 dark:text-gray-300" />
           </a>{" "}
           |{" "}
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
             href="https://www.linkedin.com/in/fmartinez03-"
             className=""
           >
-            LinkedIn
+            LinkedIn{" "}
             <Linkedin className="inline-block w-6 h-6 text-gray-700 dark:text-gray-300" />
           </a>{" "}
           |{" "}
