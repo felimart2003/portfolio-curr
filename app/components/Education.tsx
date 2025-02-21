@@ -8,13 +8,12 @@ import { motion } from "framer-motion"
 export default function Education() {
   const education = [
     {
-      degree: "Bachelor's Degree in Computer Science",
-      institution: "GC University Faisalabad",
-      period: "2018 – 2022",
+      degree: "Bachelor of Honours Mathematics",
+      institution: "University of Waterloo",
+      period: "2022 - 2027 (expected)",
       achievements: [
-        "Graduated with honors",
-        "Specialized in Web Technologies and Artificial Intelligence",
-        "Completed capstone project on 'Intelligent Web Application for Healthcare'",
+        "Executive organizer for the first University of Waterloo & St. Jerome’s University chess tournament",
+        "Organizer of the Chess Club and member of the Mathematics Society and Poker Club",
       ],
     },
   ]
