@@ -58,7 +58,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Get in Touch
+          Contact Me
         </motion.h2>
         <div className="flex flex-col lg:flex-row gap-12">
           <motion.div
