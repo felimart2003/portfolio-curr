@@ -17,7 +17,7 @@ const EclipseButton: React.FC<EclipseButtonProps> = ({ href, text }) => {
         <div className="absolute inset-0 rounded-full overflow-hidden blur-sm">
           <div className="eclipse glow absolute inset-0 rounded-full -z-[1]"></div>
         </div>
-        <div className="relative rounded-full text-sm text-white font-thin bg-black/0 overflow-hidden">
+        <div className="relative rounded-full text-sm text-white bg-black/0 overflow-hidden">
           <div className="eclipse absolute inset-0 rounded-full bg-white -z-[1]"></div>
           <div className="m-[2px] px-4 py-1.5 rounded-full bg-black/95">
             {text}
