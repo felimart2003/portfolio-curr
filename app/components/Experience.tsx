@@ -8,10 +8,10 @@ import AnimatedSectionHeader from "./AnimatedSectionHeader"
 export default function Experience() {
   const experiences = [
     {
-      company: "Freelance",
+      company: "Lynxfield",
       location: "Remote",
-      period: "2024 - Present",
-      role: "MERN Stack Developer",
+      period: "Jan 2024 - Present",
+      role: "Technical Support Engineer",
       responsibilities: [
         "Developing custom web applications for international clients",
         "Building responsive and scalable frontend interfaces with React",
@@ -21,29 +21,16 @@ export default function Experience() {
       ],
     },
     {
-      company: "Salaba Fasteners",
-      location: "Saudi Arabia (Hybrid)",
-      period: "2024 - Present",
-      role: "MERN Stack Developer",
+      company: "Self-Employed",
+      location: "Belleville, ON, CA",
+      period: "May 2024 - Present",
+      role: "Math Tutor",
       responsibilities: [
         "Developed full-fledged ERP system using MERN stack",
         "Designed and implemented RESTful APIs",
         "Created responsive interfaces with React.js and Redux",
         "Implemented secure authentication systems",
         "Utilized WebSockets for real-time features",
-      ],
-    },
-    {
-      company: "TechVention",
-      location: "Lahore, Pakistan",
-      period: "2022 - 2024",
-      role: "Software Engineer",
-      responsibilities: [
-        "Migrated codebase to Fastify with TypeScript",
-        "Implemented OOP concepts for scalability",
-        "Built backend REST API and OAuth",
-        "Integrated third-party APIs",
-        "Implemented i18n features",
       ],
     },
   ]
