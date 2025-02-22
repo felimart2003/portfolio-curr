@@ -13,11 +13,11 @@ export default function Experience() {
       period: "Jan 2024 - Present",
       role: "Technical Support Engineer",
       responsibilities: [
-        "Developing custom web applications for international clients",
-        "Building responsive and scalable frontend interfaces with React",
-        "Implementing secure backend systems with Node.js and Express",
-        "Creating RESTful APIs and managing MongoDB databases",
-        "Collaborating with clients to deliver high-quality solutions",
+        "Remotely accessed Lynxfield devices to reprogram them, addressing and resolving typically under 6 hours",
+        "Developed a Bash script to automate an important daily task, saving up to 38% of task time",
+        "Performed data entry tasks directly on Lynxfield’s online portals, generating 30+ page reports containing detailed driver performance and statistics for clients",
+        "Cross-referenced data with clients achieving 98.7% accuracy across 250+ instances",
+        "Tested a pre-release Flutter app to improve functionality and user experience",
       ],
     },
     {
@@ -26,11 +26,9 @@ export default function Experience() {
       period: "May 2024 - Present",
       role: "Math Tutor",
       responsibilities: [
-        "Developed full-fledged ERP system using MERN stack",
-        "Designed and implemented RESTful APIs",
-        "Created responsive interfaces with React.js and Redux",
-        "Implemented secure authentication systems",
-        "Utilized WebSockets for real-time features",
+        "Delivered focused 1-on-1 tutoring sessions on a scheduled basis",
+        "Provided intuition and problem-solving techniques",
+        "Clients achieved 95%+ grades on IB tests and other satisfactory results",
       ],
     },
   ]
