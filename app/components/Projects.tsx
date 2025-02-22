@@ -6,28 +6,29 @@ const projects = [
   {
     id: 1,
     name: "Stock Advisor",
-    description:
-      "A bot that is able to determine whether your stocks in a portfolio are undervalued using an algorithm.",
+    description: "A bot that is able to determine whether your stocks in a portfolio are undervalued using an algorithm.",
     image: "/path/to/project-one.jpg",
     demoLink: "https://www.instagram.com/turnoffig/",
     githubLink: "https://github.com/felimart2003/Stock-advisor",
+    infoLink: "",
   },
   {
     id: 2,
     name: "Get Off IG",
-    description:
-      "An Instagram bot to encourage followers to stop scrolling by posting often (daily).",
+    description: "An Instagram bot to encourage followers to stop scrolling by posting often (daily).",
     image: "/path/to/project-two.jpg",
     demoLink: "https://www.instagram.com/turnoffig/",
     githubLink: "https://github.com/username/project-two",
+    infoLink: "",
   },
   {
     id: 3,
-    name: "Project Three",
+    name: "Canada-Wide Science Fair",
     description: "This is a description for Project Three.",
     image: "/path/to/project-three.jpg",
-    demoLink: "https://demo-link.com/project-three",
-    githubLink: "https://github.com/username/project-three",
+    demoLink: "",
+    githubLink: "",
+    infoLink: "http://secure.youthscience.ca/virtualcwsf/projectdetails.php?id=5164&",
   },
 ];
 
@@ -40,10 +41,7 @@ const Projects: React.FC = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md flex flex-col h-full"
-            >
+            <div key={project.id} className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md flex flex-col h-full">
               <div className="relative w-full h-48 mb-4">
                 <Image
                   src={project.image}
@@ -58,8 +56,20 @@ const Projects: React.FC = () => {
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 {project.description}
               </p>
-              <div className="flex justify-between mt-auto">
-                <EclipseButton href={project.demoLink} text="Demo" />
+              <div className="flex justify-between mt-auto space-x-2">
+                {project.demoLink && (
+                  <EclipseButton href={project.demoLink} text="Demo" />
+                )}
+                {project.infoLink && (
+                  <a
+                    href={project.infoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-full bg-white/80 hover:bg-white dark:bg-gray-800/80 dark:hover:bg-gray-800 transition-colors duration-300 shadow-lg hover:shadow-xl text-gray-700 dark:text-gray-300 no-underline"
+                  >
+                    Info
+                  </a>
+                )}
                 <a
                   href={project.githubLink}
                   target="_blank"
