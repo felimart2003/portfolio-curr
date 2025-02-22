@@ -1,6 +1,6 @@
 "use client"
 
-import { Briefcase, Calendar, MapPin, Globe } from "lucide-react"
+import { Briefcase, Calendar, MapPin, Globe, Building } from "lucide-react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import AnimatedSectionHeader from "./AnimatedSectionHeader"
@@ -41,7 +41,7 @@ export default function Experience() {
       className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-indigo-900 transition-colors duration-300 overflow-hidden relative"
     >
       <div className="container mx-auto px-6 relative z-10">
-        <AnimatedSectionHeader title="Professional Experience" />
+        <AnimatedSectionHeader title="Work Experience" />
         <div className="space-y-16">
           {experiences.map((exp, index) => (
             <motion.div
@@ -58,9 +58,13 @@ export default function Experience() {
               ></div>
               <div className="relative z-10">
                 <h3 className="text-2xl font-semibold mb-2 dark:text-white flex items-center">
-                  {exp.company === "Freelance" ? <Globe className="w-6 h-6 mr-2 text-blue-500" /> : null}
-                  {exp.company}
+                  {exp.company === "Remote" ? <Globe className="w-6 h-6 mr-2 text-blue-500" /> : null}
+                  {exp.role}
                 </h3>
+                <p className="text-xl font-medium mb-4 dark:text-gray-200 flex items-center">
+                  <Building className="w-5 h-5 mr-2" />
+                  {exp.company}
+                </p>
                 <p className="text-gray-600 dark:text-gray-300 mb-4 flex items-center">
                   <MapPin className="w-4 h-4 mr-2" />
                   {exp.location}
@@ -68,10 +72,6 @@ export default function Experience() {
                 <p className="text-gray-600 dark:text-gray-300 mb-4 flex items-center">
                   <Calendar className="w-4 h-4 mr-2" />
                   {exp.period}
-                </p>
-                <p className="text-xl font-medium mb-4 dark:text-gray-200 flex items-center">
-                  <Briefcase className="w-5 h-5 mr-2" />
-                  {exp.role}
                 </p>
                 <ul className="list-none space-y-2">
                   {exp.responsibilities.map((resp, idx) => (
