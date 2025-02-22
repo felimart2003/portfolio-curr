@@ -1,11 +1,13 @@
 import React from "react";
 import Image from "next/image";
+import EclipseButton from "@/components/ui/EclipseButton";
 
 const projects = [
   {
     id: 1,
     name: "Stock Advisor",
-    description: "A bot that is able to determine whether your stocks in a portfolio are undervalued using an algorithm.",
+    description:
+      "A bot that is able to determine whether your stocks in a portfolio are undervalued using an algorithm.",
     image: "/path/to/project-one.jpg",
     demoLink: "https://www.instagram.com/turnoffig/",
     githubLink: "https://github.com/felimart2003/Stock-advisor",
@@ -13,7 +15,8 @@ const projects = [
   {
     id: 2,
     name: "Get Off IG",
-    description: "An Instagram bot to encourage followers to stop scrolling by posting often (daily).",
+    description:
+      "An Instagram bot to encourage followers to stop scrolling by posting often (daily).",
     image: "/path/to/project-two.jpg",
     demoLink: "https://www.instagram.com/turnoffig/",
     githubLink: "https://github.com/username/project-two",
@@ -37,7 +40,10 @@ const Projects: React.FC = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md flex flex-col h-full">
+            <div
+              key={project.id}
+              className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md flex flex-col h-full"
+            >
               <div className="relative w-full h-48 mb-4">
                 <Image
                   src={project.image}
@@ -53,19 +59,12 @@ const Projects: React.FC = () => {
                 {project.description}
               </p>
               <div className="flex justify-between mt-auto">
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300"
-                >
-                  Demo
-                </a>
+                <EclipseButton href={project.demoLink} text="Demo" />
                 <a
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition-colors duration-300"
+                  className="p-3 rounded-full bg-white/80 hover:bg-white dark:bg-gray-800/80 dark:hover:bg-gray-800 transition-colors duration-300 shadow-lg hover:shadow-xl text-gray-700 dark:text-gray-300 no-underline"
                 >
                   GitHub
                 </a>
