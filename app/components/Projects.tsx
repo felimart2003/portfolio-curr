@@ -7,8 +7,8 @@ const projects = [
     id: 1,
     name: "Stock Advisor",
     description: "A bot that is able to determine whether your stocks in a portfolio are undervalued using an algorithm.",
-    image: "/path/to/project-one.jpg",
-    demoLink: "https://www.instagram.com/turnoffig/",
+    image: "/yfinance.png",
+    demoLink: "",
     githubLink: "https://github.com/felimart2003/Stock-advisor",
     infoLink: "",
   },
@@ -25,7 +25,7 @@ const projects = [
     id: 3,
     name: "Canada-Wide Science Fair",
     description: "This is a description for Project Three.",
-    image: "/path/to/project-three.jpg",
+    image: "/CWSF.png",
     demoLink: "",
     githubLink: "",
     infoLink: "http://secure.youthscience.ca/virtualcwsf/projectdetails.php?id=5164&",
@@ -57,27 +57,32 @@ const Projects: React.FC = () => {
                 {project.description}
               </p>
               <div className="flex justify-between mt-auto space-x-2">
-                {project.demoLink && (
-                  <EclipseButton href={project.demoLink} text="Demo" />
+                {project.name === "Canada-Wide Science Fair" ? (
+                  project.infoLink && (
+                    <a
+                      href={project.infoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 rounded-full bg-white/80 hover:bg-white dark:bg-gray-800/80 dark:hover:bg-gray-800 transition-colors duration-300 shadow-lg hover:shadow-xl text-gray-700 dark:text-gray-300 no-underline"
+                    >
+                      Info
+                    </a>
+                  )
+                ) : (
+                  <>
+                    {project.demoLink && (
+                      <EclipseButton href={project.demoLink} text="Demo" />
+                    )}
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 rounded-full bg-white/80 hover:bg-white dark:bg-gray-800/80 dark:hover:bg-gray-800 transition-colors duration-300 shadow-lg hover:shadow-xl text-gray-700 dark:text-gray-300 no-underline"
+                    >
+                      GitHub
+                    </a>
+                  </>
                 )}
-                {project.infoLink && (
-                  <a
-                    href={project.infoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-white/80 hover:bg-white dark:bg-gray-800/80 dark:hover:bg-gray-800 transition-colors duration-300 shadow-lg hover:shadow-xl text-gray-700 dark:text-gray-300 no-underline"
-                  >
-                    Info
-                  </a>
-                )}
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-full bg-white/80 hover:bg-white dark:bg-gray-800/80 dark:hover:bg-gray-800 transition-colors duration-300 shadow-lg hover:shadow-xl text-gray-700 dark:text-gray-300 no-underline"
-                >
-                  GitHub
-                </a>
               </div>
             </div>
           ))}
