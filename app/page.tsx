@@ -7,6 +7,7 @@ import Education from "./components/Education";
 import Contact from "./components/Contact";
 import FloatingNav from "./components/floating-nav";
 import Footer from "./components/Footer";
+import Projects from "./components/Projects"; // Import the Projects component
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       <About />
       <Experience />
       <Skills />
-      {/* <Services />  NOT NEEDED */}
+      <Projects /> {/* Add the Projects component */}
       <Education />
       <Contact />
       <Footer />
