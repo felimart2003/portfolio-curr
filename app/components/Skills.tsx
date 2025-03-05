@@ -10,7 +10,7 @@ const SkillIcon = ({ icon: Icon, color }: { icon: any; color: string }) => (
   </div>
 )
 
-const skills = [
+const languages = [
   {
     icon: Code,
     name: "Frontend Development",
@@ -19,6 +19,30 @@ const skills = [
       "Building responsive and interactive user interfaces with modern React features and Next.js for optimal performance.",
     color: "text-blue-500",
   },
+  {
+    icon: Terminal,
+    name: "TypeScript",
+    tech: "TypeScript, JavaScript",
+    description: "Writing type-safe code for better maintainability and developer experience.",
+    color: "text-yellow-500",
+  },
+  {
+    icon: Cpu,
+    name: "API Development",
+    tech: "REST, GraphQL",
+    description: "Designing and implementing efficient APIs for seamless data communication.",
+    color: "text-red-500",
+  },
+  {
+    icon: Globe,
+    name: "Web Performance",
+    tech: "Optimization, SEO",
+    description: "Optimizing web applications for speed, accessibility, and search engine visibility.",
+    color: "text-teal-500",
+  },
+]
+
+const tools = [
   {
     icon: Server,
     name: "Backend Development",
@@ -48,32 +72,11 @@ const skills = [
     color: "text-orange-500",
   },
   {
-    icon: Terminal,
-    name: "TypeScript",
-    tech: "TypeScript, JavaScript",
-    description: "Writing type-safe code for better maintainability and developer experience.",
-    color: "text-yellow-500",
-  },
-  {
     icon: Layers,
     name: "State Management",
     tech: "Redux, Context API",
     description: "Managing complex application state with modern state management solutions.",
     color: "text-indigo-500",
-  },
-  {
-    icon: Cpu,
-    name: "API Development",
-    tech: "REST, GraphQL",
-    description: "Designing and implementing efficient APIs for seamless data communication.",
-    color: "text-red-500",
-  },
-  {
-    icon: Globe,
-    name: "Web Performance",
-    tech: "Optimization, SEO",
-    description: "Optimizing web applications for speed, accessibility, and search engine visibility.",
-    color: "text-teal-500",
   },
   {
     icon: Workflow,
@@ -105,24 +108,51 @@ export default function Skills() {
 
       <div className="container mx-auto px-6 relative z-10">
         <AnimatedSectionHeader title="Skills" />
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          {skills.map((skill, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center">
-                <SkillIcon icon={skill.icon} color={skill.color} />
-                <h3 className="text-sm font-semibold dark:text-white text-center mt-2">
-                  {skill.name}
-                </h3>
-                <p className="text-xs text-gray-600 dark:text-gray-400 text-center">{skill.tech}</p>
-              </div>
-            </motion.div>
-          ))}
+        
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold dark:text-white mb-6">Languages</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {languages.map((skill, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                  <SkillIcon icon={skill.icon} color={skill.color} />
+                  <h3 className="text-sm font-semibold dark:text-white text-center mt-2">
+                    {skill.name}
+                  </h3>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 text-center">{skill.tech}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h2 className="text-2xl font-bold dark:text-white mb-6">Tools</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {tools.map((skill, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                  <SkillIcon icon={skill.icon} color={skill.color} />
+                  <h3 className="text-sm font-semibold dark:text-white text-center mt-2">
+                    {skill.name}
+                  </h3>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 text-center">{skill.tech}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
