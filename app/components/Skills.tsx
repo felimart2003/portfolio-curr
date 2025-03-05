@@ -2,78 +2,129 @@
 
 import { motion } from "framer-motion"
 import { Code, Database, Server, Layout, GitBranch, Terminal, Layers, Cpu, Globe, Workflow, Github } from "lucide-react"
-import { SiPython } from "react-icons/si"
+import { SiPython, SiHtml5, SiCss3, SiJavascript, SiC, SiGnubash, SiLua, SiRacket, SiLinux, SiArchlinux, SiDebian, SiVmware, SiVirtualbox, SiNeovim, SiPycharm, SiWireshark } from "react-icons/si"
+import { FaJava } from "react-icons/fa";
+
+import { PiMicrosoftExcelLogoFill } from "react-icons/pi";
+
+import { BiLogoVisualStudio } from "react-icons/bi";
+
 import AnimatedSectionHeader from "./AnimatedSectionHeader"
 
 const SkillIcon = ({ icon: Icon, color }: { icon: any; color: string }) => (
-  <div className={`p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg mb-2`}>
-    <Icon className={`w-6 h-6 ${color}`} />
+  <div className={"p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg mb-2"}>
+    <Icon className={"w-6 h-6 ${color}"} />
   </div>
 )
 
 const languages = [
   {
-    icon: Code,
-    name: "Frontend Development",
-    color: "text-blue-500",
+    icon: SiPython,
+    name: "Python",
+    color: "text-green-500",
   },
   {
-    icon: Terminal,
-    name: "TypeScript",
-    color: "text-yellow-500",
-  },
-  {
-    icon: Cpu,
-    name: "API Development",
+    icon: FaJava,
+    name: "Java",
     color: "text-red-500",
   },
   {
-    icon: Globe,
-    name: "Web Performance",
-    color: "text-teal-500",
+    icon: SiHtml5,
+    name: "HTML",
+    color: "text-orange-500",
   },
   {
-    icon: SiPython,
-    name: "Python Development",
-    color: "text-green-500",
+    icon: SiCss3,
+    name: "CSS",
+    color: "text-blue-500",
+  },
+  {
+    icon: SiJavascript,
+    name: "JavaScript",
+    color: "text-yellow-500",
+  },
+  {
+    icon: SiC,
+    name: "C",
+    color: "text-blue-500",
+  },
+  {
+    icon: SiGnubash,
+    name: "Bash",
+    color: "text-gray-500",
+  },
+  {
+    icon: SiLua,
+    name: "Lua",
+    color: "text-blue-500",
+  },
+  {
+    icon: SiRacket,
+    name: "Racket",
+    color: "text-red-500",
   },
 ]
 
 const tools = [
   {
-    icon: Server,
-    name: "Backend Development",
+    icon: SiLinux,
+    name: "Linux",
+    color: "text-yellow-500",
+  },
+  {
+    icon: SiArchlinux,
+    name: "Arch Linux",
+    color: "text-blue-500",
+  },
+  {
+    icon: SiDebian,
+    name: "Debian",
+    color: "text-red-500",
+  },
+  {
+    icon: SiVmware,
+    name: "VMware",
+    color: "text-blue-500",
+  },
+  {
+    icon: SiVirtualbox ,
+    name: "VirtualBox ",
+    color: "text-blue-500",
+  },
+  {
+    icon: SiNeovim,
+    name: "Neovim",
     color: "text-green-500",
   },
   {
-    icon: Database,
-    name: "Database Management",
-    color: "text-purple-500",
+    icon: BiLogoVisualStudio,
+    name: "VS Code",
+    color: "text-blue-500",
   },
   {
-    icon: Layout,
-    name: "UI/UX Design",
-    color: "text-pink-500",
-  },
-  {
-    icon: GitBranch,
-    name: "Version Control",
-    color: "text-orange-500",
-  },
-  {
-    icon: Layers,
-    name: "State Management",
-    color: "text-indigo-500",
-  },
-  {
-    icon: Workflow,
-    name: "Agile Methodologies",
-    color: "text-cyan-500",
+    icon: SiPycharm,
+    name: "PyCharm",
+    color: "text-green-500",
   },
   {
     icon: Github,
     name: "GitHub",
     color: "text-black",
+  },
+  {
+    icon: GitBranch,
+    name: "Git",
+    color: "text-orange-500",
+  },
+  {
+    icon: SiWireshark,
+    name: "Wireshark",
+    color: "text-blue-500",
+  },
+  {
+    icon: PiMicrosoftExcelLogoFill,
+    name: "Excel",
+    color: "text-green-500",
   },
 ]
 
