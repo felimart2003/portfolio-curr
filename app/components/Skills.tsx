@@ -10,7 +10,7 @@ import AnimatedSectionHeader from "./AnimatedSectionHeader"
 
 const SkillIcon = ({ icon: Icon, color }: { icon: any; color: string }) => (
   <div className={"p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg mb-2"}>
-    <Icon className={"w-6 h-6 ${color}"} />
+    <Icon className={`w-10 h-10 ${color}`} />
   </div>
 )
 
@@ -106,7 +106,7 @@ const tools = [
   {
     icon: Github,
     name: "GitHub",
-    color: "text-black",
+    color: "text-white",
   },
   {
     icon: GitBranch,
@@ -171,7 +171,7 @@ export default function Skills() {
 
         <div>
           <h2 className="text-2xl font-bold dark:text-white mb-6">Tools</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {tools.map((skill, index) => (
               <motion.div
                 key={index}
