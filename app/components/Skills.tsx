@@ -5,7 +5,7 @@ import { Code, Database, Server, Layout, GitBranch, Terminal, Layers, Cpu, Globe
 import AnimatedSectionHeader from "./AnimatedSectionHeader"
 
 const SkillIcon = ({ icon: Icon, color }: { icon: any; color: string }) => (
-  <div className={`p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg`}>
+  <div className={`p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg mb-2`}>
     <Icon className={`w-6 h-6 ${color}`} />
   </div>
 )
@@ -105,7 +105,7 @@ export default function Skills() {
 
       <div className="container mx-auto px-6 relative z-10">
         <AnimatedSectionHeader title="Skills" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
@@ -114,17 +114,12 @@ export default function Skills() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div className="flex items-center mb-4">
-                  <SkillIcon icon={skill.icon} color={skill.color} />
-                  <div className="ml-4">
-                    <h3 className="text-lg font-semibold dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                      {skill.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{skill.tech}</p>
-                  </div>
-                </div>
-                <p className="text-gray-700 dark:text-gray-300 text-sm">{skill.description}</p>
+              <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                <SkillIcon icon={skill.icon} color={skill.color} />
+                <h3 className="text-sm font-semibold dark:text-white text-center mt-2">
+                  {skill.name}
+                </h3>
+                <p className="text-xs text-gray-600 dark:text-gray-400 text-center">{skill.tech}</p>
               </div>
             </motion.div>
           ))}
