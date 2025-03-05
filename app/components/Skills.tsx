@@ -1,7 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code, Database, Server, Layout, GitBranch, Terminal, Layers, Cpu, Globe, Workflow } from "lucide-react"
+import { Code, Database, Server, Layout, GitBranch, Terminal, Layers, Cpu, Globe, Workflow, Github } from "lucide-react"
+import { SiPython } from "react-icons/si"
 import AnimatedSectionHeader from "./AnimatedSectionHeader"
 
 const SkillIcon = ({ icon: Icon, color }: { icon: any; color: string }) => (
@@ -39,6 +40,13 @@ const languages = [
     tech: "Optimization, SEO",
     description: "Optimizing web applications for speed, accessibility, and search engine visibility.",
     color: "text-teal-500",
+  },
+  {
+    icon: SiPython,
+    name: "Python Development",
+    tech: "Python, Django",
+    description: "Developing robust applications using Python and Django framework.",
+    color: "text-green-500",
   },
 ]
 
@@ -84,6 +92,13 @@ const tools = [
     tech: "Scrum, Kanban",
     description: "Working efficiently in agile environments with focus on continuous delivery.",
     color: "text-cyan-500",
+  },
+  {
+    icon: Github,
+    name: "GitHub",
+    tech: "GitHub",
+    description: "Managing code versions efficiently with GitHub and collaborating effectively.",
+    color: "text-black",
   },
 ]
 
