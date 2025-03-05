@@ -15,37 +15,26 @@ const languages = [
   {
     icon: Code,
     name: "Frontend Development",
-    tech: "React.js, Next.js",
-    description:
-      "Building responsive and interactive user interfaces with modern React features and Next.js for optimal performance.",
     color: "text-blue-500",
   },
   {
     icon: Terminal,
     name: "TypeScript",
-    tech: "TypeScript, JavaScript",
-    description: "Writing type-safe code for better maintainability and developer experience.",
     color: "text-yellow-500",
   },
   {
     icon: Cpu,
     name: "API Development",
-    tech: "REST, GraphQL",
-    description: "Designing and implementing efficient APIs for seamless data communication.",
     color: "text-red-500",
   },
   {
     icon: Globe,
     name: "Web Performance",
-    tech: "Optimization, SEO",
-    description: "Optimizing web applications for speed, accessibility, and search engine visibility.",
     color: "text-teal-500",
   },
   {
     icon: SiPython,
     name: "Python Development",
-    tech: "Python, Django",
-    description: "Developing robust applications using Python and Django framework.",
     color: "text-green-500",
   },
 ]
@@ -54,50 +43,36 @@ const tools = [
   {
     icon: Server,
     name: "Backend Development",
-    tech: "Node.js, Express, Fastify",
-    description: "Creating robust server-side applications with focus on scalability and clean architecture.",
     color: "text-green-500",
   },
   {
     icon: Database,
     name: "Database Management",
-    tech: "MongoDB, Mongoose",
-    description: "Designing and implementing efficient database schemas and queries for optimal data management.",
     color: "text-purple-500",
   },
   {
     icon: Layout,
     name: "UI/UX Design",
-    tech: "Tailwind CSS, Material UI",
-    description: "Crafting beautiful and intuitive user interfaces with modern design principles and frameworks.",
     color: "text-pink-500",
   },
   {
     icon: GitBranch,
     name: "Version Control",
-    tech: "Git, GitHub",
-    description: "Managing code versions efficiently with Git and collaborating effectively through GitHub.",
     color: "text-orange-500",
   },
   {
     icon: Layers,
     name: "State Management",
-    tech: "Redux, Context API",
-    description: "Managing complex application state with modern state management solutions.",
     color: "text-indigo-500",
   },
   {
     icon: Workflow,
     name: "Agile Methodologies",
-    tech: "Scrum, Kanban",
-    description: "Working efficiently in agile environments with focus on continuous delivery.",
     color: "text-cyan-500",
   },
   {
     icon: Github,
     name: "GitHub",
-    tech: "GitHub",
-    description: "Managing code versions efficiently with GitHub and collaborating effectively.",
     color: "text-black",
   },
 ]
@@ -140,7 +115,6 @@ export default function Skills() {
                   <h3 className="text-sm font-semibold dark:text-white text-center mt-2">
                     {skill.name}
                   </h3>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 text-center">{skill.tech}</p>
                 </div>
               </motion.div>
             ))}
@@ -163,7 +137,6 @@ export default function Skills() {
                   <h3 className="text-sm font-semibold dark:text-white text-center mt-2">
                     {skill.name}
                   </h3>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 text-center">{skill.tech}</p>
                 </div>
               </motion.div>
             ))}
