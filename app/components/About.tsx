@@ -56,9 +56,12 @@ export default function About() {
               Bachelor of Mathematics. I am looking for a coop position for
               Summer 2025.
             </p>
-            <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
               I have a strong passion for programming. I also love to play soccer, chess <a href="https://lichess.org/@/TheProChessMaster">online</a>,
-              read, <a href="https://letterboxd.com/felimart">watch movies</a> and TV shows with friends! I enjoy listening to <a href="https://spoti.fi/3EJp9ZD">music</a>, playing piano, photography, no-stakes poker, <a href="https://vsco.co/fmart3/gallery">photography</a>, and YouTube. 
+              read, <a href="https://letterboxd.com/felimart">watch movies</a> and TV shows with friends! I enjoy listening to <a href="https://spoti.fi/3EJp9ZD">music</a>, playing piano, weightlifting, rock-climbing, testing fragrances, photography, no-stakes poker, <a href="https://vsco.co/fmart3/gallery">photography</a>, and YouTube.
+            </p>
+            <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+              I am keen to learn new things and apply what I know and I am excited to bring my passion for technology and problem-solving to a team.
             </p>
           </motion.div>
           <motion.div
