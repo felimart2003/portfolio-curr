@@ -4,11 +4,8 @@ import { motion } from "framer-motion"
 import { Code, Database, Server, Layout, GitBranch, Terminal, Layers, Cpu, Globe, Workflow, Github } from "lucide-react"
 import { SiPython, SiHtml5, SiCss3, SiJavascript, SiC, SiGnubash, SiLua, SiRacket, SiLinux, SiArchlinux, SiDebian, SiVmware, SiVirtualbox, SiNeovim, SiPycharm, SiWireshark } from "react-icons/si"
 import { FaJava } from "react-icons/fa";
-
 import { PiMicrosoftExcelLogoFill } from "react-icons/pi";
-
 import { BiLogoVisualStudio } from "react-icons/bi";
-
 import AnimatedSectionHeader from "./AnimatedSectionHeader"
 
 const SkillIcon = ({ icon: Icon, color }: { icon: any; color: string }) => (
@@ -87,8 +84,8 @@ const tools = [
     color: "text-blue-500",
   },
   {
-    icon: SiVirtualbox ,
-    name: "VirtualBox ",
+    icon: SiVirtualbox,
+    name: "VirtualBox",
     color: "text-blue-500",
   },
   {
@@ -152,7 +149,7 @@ export default function Skills() {
         
         <div className="mb-12">
           <h2 className="text-2xl font-bold dark:text-white mb-6">Languages</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {languages.map((skill, index) => (
               <motion.div
                 key={index}
@@ -161,9 +158,9 @@ export default function Skills() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center">
                   <SkillIcon icon={skill.icon} color={skill.color} />
-                  <h3 className="text-sm font-semibold dark:text-white text-center mt-2">
+                  <h3 className="text-m font-semibold dark:text-white text-center mt-2">
                     {skill.name}
                   </h3>
                 </div>
@@ -174,7 +171,7 @@ export default function Skills() {
 
         <div>
           <h2 className="text-2xl font-bold dark:text-white mb-6">Tools</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {tools.map((skill, index) => (
               <motion.div
                 key={index}
@@ -183,9 +180,9 @@ export default function Skills() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                <div className="bg-white dark:bg-gray-800 p-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center">
                   <SkillIcon icon={skill.icon} color={skill.color} />
-                  <h3 className="text-sm font-semibold dark:text-white text-center mt-2">
+                  <h3 className="text-m font-semibold dark:text-white text-center mt-2">
                     {skill.name}
                   </h3>
                 </div>
