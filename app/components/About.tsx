@@ -1,33 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Database, Server, Zap } from "lucide-react";
 import Image from "next/image";
 
 export default function About() {
-  const skills = [
-    {
-      icon: <Code className="w-8 h-8 text-blue-500" />,
-      title: "Frontend",
-      description: "React, Next.js, Redux",
-    },
-    {
-      icon: <Server className="w-8 h-8 text-green-500" />,
-      title: "Backend",
-      description: "Node.js, Express, Fastify",
-    },
-    {
-      icon: <Database className="w-8 h-8 text-purple-500" />,
-      title: "Database",
-      description: "MongoDB, Mongoose",
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      title: "Performance",
-      description: "Optimization, Caching",
-    },
-  ];
-
   return (
     <section
       id="about"
@@ -65,26 +41,21 @@ export default function About() {
             </p>
           </motion.div>
           <motion.div
-            className="md:w-1/2 grid grid-cols-2 gap-6"
+            className="md:w-1/2 flex justify-center"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
-              >
-                {skill.icon}
-                <h3 className="text-xl font-semibold mt-4 mb-2 dark:text-white">
-                  {skill.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  {skill.description}
-                </p>
-              </div>
-            ))}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <Image
+                src="/f_about2.jpg"
+                alt="Felipe picture"
+                width={300}
+                height={300}
+                className="rounded-2xl"
+              />
+            </div>
           </motion.div>
         </div>
       </div>
